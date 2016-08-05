@@ -1,0 +1,130 @@
+.block-wrapper {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 40px;
+}
+
+.block-wrapper a {
+
+}
+
+.block-img {
+    background-color: #3c4d6b;
+}
+
+    .block-img .block-hover:hover {
+        background-color: #21385f;;
+    }
+
+.item {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.item:nth-child(1){
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.item:nth-child(4){
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media all and (min-width: 1024px)  {
+    #block0 {
+        margin-left: 0;
+    }
+
+    #block3 {
+        margin-right: 0;
+    }
+
+    .block-img {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.introtext {
+    position: absolute;
+    top: 55%;
+    color: #fff;
+    padding: 0 6%;
+    min-width: 95%;
+}
+
+.titleblock {
+    padding: 0 15%;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+    height: 33%;
+    margin: 0;
+    background-color: #42536f;
+    border-top: 1px #8f97a6 solid;
+}
+
+    .titleblock p {
+        margin-top: 30px;
+    }
+
+.block-hover {
+    width: 100%;
+    height: 372px;
+    z-index: 50;
+    position: relative;
+    background-position: top center;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    background-color: transparent;
+    width: 100%;
+    height: 25%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+    margin-bottom: 10px !important;
+}
+
+#txt-slider0, #txt-slider1, #txt-slider2, #txt-slider3 {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(13, 43, 89, 0.6);
+    height: 35%;
+    padding: 3% 4%;
+    display: none;
+}
+
+@media all and (min-width: 1001px){
+    .txt-slider {
+        font-size: 3.5rem;
+    }
+}
+
+@media all and (max-width: 1000px) and (min-width: 701px) {
+    .txt-slider {
+        font-size: 2.5rem;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .txt-slider {
+        font-size: 1.3rem;
+    }
+}
+
+.slide-active {
+    display: block !important;
+}

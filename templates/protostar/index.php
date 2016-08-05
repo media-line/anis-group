@@ -38,14 +38,6 @@ else
 	$fullWidth = 0;
 }
 
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
-
-$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/template.js');
-
-// Add Stylesheets
-$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/template.css');
-
 // Use of Google Font
 if ($this->params->get('googleFont'))
 {
@@ -79,34 +71,8 @@ if ($this->params->get('templateColor'))
 	}");
 }
 
-// Check for a custom CSS file
-$userCss = JPATH_SITE . '/templates/' . $this->template . '/css/user.css';
-
-if (file_exists($userCss) && filesize($userCss) > 0)
-{
-	$doc->addStyleSheetVersion('templates/' . $this->template . '/css/user.css');
-}
-
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
-
-// Adjusting content width
-if ($this->countModules('position-7') && $this->countModules('position-8'))
-{
-	$span = "span6";
-}
-elseif ($this->countModules('position-7') && !$this->countModules('position-8'))
-{
-	$span = "span9";
-}
-elseif (!$this->countModules('position-7') && $this->countModules('position-8'))
-{
-	$span = "span9";
-}
-else
-{
-	$span = "span12";
-}
 
 // Logo file or site title param
 if ($this->params->get('logoFile'))
@@ -121,97 +87,65 @@ else
 {
 	$logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
 }
+
+// Add JavaScript Frameworks
+$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/template.js');
+// Add Stylesheets
+$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/template.css');
 ?>
+
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
 	<!--[if lt IE 9]><script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
+
+	<!-- Подключение Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="/bootstrap-3.3.2/css/bootstrap.css" />
+	<script type="text/javascript" src="/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+
+	<!-- Подключение собственного CSS -->
+	<link type="text/css" rel="stylesheet" href="/templates/protostar/css/custom.css" />
+
 </head>
-<body class="site <?php echo $option
-	. ' view-' . $view
-	. ($layout ? ' layout-' . $layout : ' no-layout')
-	. ($task ? ' task-' . $task : ' no-task')
-	. ($itemid ? ' itemid-' . $itemid : '')
-	. ($params->get('fluidContainer') ? ' fluid' : '');
-	echo ($this->direction == 'rtl' ? ' rtl' : '');
-?>">
-	<!-- Body -->
-	<div class="body">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
-						<?php echo $logo; ?>
-						<?php if ($this->params->get('sitedescription')) : ?>
-							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
-						<?php endif; ?>
-					</a>
-					<div class="header-search pull-right">
-						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="logo  col-md-2"></div>
+				<div class="main_menu  col-md-8">
+					<jdoc:include type="modules" name="main_menu" style="xhtml" />
 				</div>
-			</header>
-			<?php if ($this->countModules('position-1')) : ?>
-				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left">
-						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-					</div>
-					<div class="nav-collapse">
-						<jdoc:include type="modules" name="position-1" style="none" />
-					</div>
-				</nav>
-			<?php endif; ?>
-			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="row-fluid">
-				<?php if ($this->countModules('position-8')) : ?>
-					<!-- Begin Sidebar -->
-					<div id="sidebar" class="span3">
-						<div class="sidebar-nav">
-							<jdoc:include type="modules" name="position-8" style="xhtml" />
-						</div>
-					</div>
-					<!-- End Sidebar -->
-				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
-					<!-- Begin Content -->
-					<jdoc:include type="modules" name="position-3" style="xhtml" />
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
-					<!-- End Content -->
-				</main>
-				<?php if ($this->countModules('position-7')) : ?>
-					<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<jdoc:include type="modules" name="position-7" style="well" />
-						<!-- End Right Sidebar -->
-					</div>
-				<?php endif; ?>
+				<div class="lang  col-md-2">
+					<jdoc:include type="modules" name="lang" style="xhtml" />
+				</div>
 			</div>
+            <?php
+            $app = JFactory::getApplication();
+            $menu = $app->getMenu();
+            if ($menu->getActive() != $menu->getDefault())
+            {
+                echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" />';
+            } ?>
+			<div class="top_slider">
+                <jdoc:include type="modules" name="top_slider" style="xhtml" />
+			</div>
+            <div class="clearfix"></div>
+			<div class="blocks">
+                <jdoc:include type="modules" name="blocks" style="xhtml" />
+			</div>
+			<div class="bottom_slider"></div>
+			<div class="list_of_articles">
+                <jdoc:include type="modules" name="list_of_articles" style="xhtml" />
+            </div>
+			<footer>
+				<div class="copyright"></div>
+				<div class="bottom_menu"></div>
+				<div class="right_footer">
+					<div class="phone"></div>
+					<div class="medialine"></div>
+				</div>
+			</footer>
 		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<hr />
-			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right">
-				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-				</a>
-			</p>
-			<p>
-				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
-			</p>
-		</div>
-	</footer>
-	<jdoc:include type="modules" name="debug" style="none" />
-</body>
+	</body>
 </html>

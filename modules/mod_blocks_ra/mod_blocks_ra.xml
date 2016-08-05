@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>mod_blocks_ra</name>
+	<author>Andrei Kravchenko</author>
+	<creationDate>2016</creationDate>
+	<authorEmail>krauchanka.a@gmail.com</authorEmail>
+	<version>1.0</version>
+	<description>Модуль блоков с категориями</description>
+
+	<files>
+		<filename module="mod_blocks_ra">mod_blocks_ra.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_blocks_ra.xml</filename>
+        <folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="img0" type="media" label="Блок 1" />
+				<field name="txt0" type="text" size="50" label="Текст блока 1" />
+                <field name="url0" type="text" label="Ссылка блока 1" />
+                <field type="spacer" />
+				<field name="img1" type="media" label="Блок2" />
+                <field name="txt1" type="text" size="50" label="Текст блока 2" />
+                <field name="url1" type="text" label="Ссылка блока 2" />
+                <field type="spacer" />
+				<field name="img2" type="media" label="Блок3" />
+                <field name="txt2" type="text" size="50" label="Текст блока 3" />
+                <field name="url2" type="text" label="Ссылка блока 3" />
+                <field type="spacer" />
+				<field name="img3" type="media" label="Блок4" />
+                <field name="txt3" type="text" size="50" label="Текст блока 4" />
+                <field name="url3" type="text" label="Ссылка блока 4" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
