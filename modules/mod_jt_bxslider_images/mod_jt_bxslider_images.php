@@ -12,7 +12,7 @@
 */
 // no direct access
 defined('_JEXEC') or die;
-$document 					=& JFactory::getDocument();
+$document = JFactory::getDocument();
 $document->addStyleSheet(JURI::base() . 'modules/mod_jt_bxslider_images/css/jquery.bxslider.css');
 $jt_jquery_ver				= $params->get('jt_jquery_ver', '1.8.3');
 $jt_load_jquery				= (int)$params->get('jt_load_jquery', 1);

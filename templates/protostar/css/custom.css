@@ -19,6 +19,19 @@ body {
     margin: 0 auto;
 }
 
+.ansis-btn {
+  color: #1a7bff;
+  border: 1px solid #1a7bff;
+  border-radius: 40px;
+  padding: 20px 35px;
+  background-color: #fff;
+}
+
+.ansis-btn:hover {
+  color: #fff;
+  background-color: #1a7bff;
+}
+
 
 
 
@@ -51,4 +64,37 @@ ul.menumain {
 h1.list_of_articles {
     font-size: 40px;
     text-align: center;
+}
+
+.list_of_articles {
+  text-align: center;
+}
+
+.intro-articles-news {
+  width: 75px;
+  height: 75px;
+  float: left;
+}
+
+.one-article-new {
+  width: 24.5%;
+  display: inline-block;
+}
+
+.one-article-new a > p {
+  height: 75px;
+  padding: 0 20px;
+  width: 187px;
+  float: right;
+}
+
+.one-article-new > p {
+  float: right;
+  width: 188px;
+  padding: 0 20px;
+}
+
+.newsflash {
+  padding: 0 50px;
+  text-align: left;
 }

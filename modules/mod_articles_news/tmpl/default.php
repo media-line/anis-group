@@ -11,6 +11,10 @@ defined('_JEXEC') or die;
 ?>
 <div class="newsflash<?php echo $moduleclass_sfx; ?>">
 	<?php foreach ($list as $item) : ?>
-		<?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
+			<div class="one-article-new">
+				<?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
+			</div>
 	<?php endforeach; ?>
 </div>
+
+<a style="margin: 0 auto;" href="/index.php?option=com_content&view=category&layout=blog&id=8"><button class="btn ansis-btn">Больше статей</button></a>

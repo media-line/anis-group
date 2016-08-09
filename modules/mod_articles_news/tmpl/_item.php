@@ -16,7 +16,9 @@ $item_heading = $params->get('item_heading', 'h4');
 	<<?php echo $item_heading; ?> class="newsflash-title<?php echo $params->get('moduleclass_sfx'); ?>">
 	<?php if ($params->get('link_titles') && $item->link != '') : ?>
 		<a href="<?php echo $item->link; ?>">
-			<?php echo $item->title; ?>
+				<?php $images = json_decode($item->images); ?>
+				<img class="intro-articles-news" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+			<p><?php echo $item->title; ?></p>
 		</a>
 	<?php else : ?>
 		<?php echo $item->title; ?>
