@@ -7,7 +7,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 class FalangVersion {
 	var $_version	= '2.6.0';
-    var $_versiontype	= 'free';
+    var $_versiontype = 'pay';
     var $_date	= '2016/06/13';
 	var $_status	= 'Stable';
 	var $_revision	= '';

@@ -125,7 +125,7 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
             $menu = $app->getMenu();
             if ($menu->getActive() != $menu->getDefault())
             {
-                echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" />';
+                echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" /><jdoc:include type="modules" name="mod_map" style="xhtml" />';
             } ?>
 			<div class="top_slider">
                 <jdoc:include type="modules" name="top_slider" style="xhtml" />
@@ -139,11 +139,20 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
                 <jdoc:include type="modules" name="list_of_articles" style="xhtml" />
             </div>
 			<footer>
-				<div class="copyright"></div>
-				<div class="bottom_menu"></div>
+				<div class="copyright">
+						<jdoc:include type="modules" name="copyright" style="xhtml" />
+				</div>
+				<div class="bottom_menu">
+						<jdoc:include type="modules" name="bottom_menu" style="xhtml" />
+						<jdoc:include type="modules" name="services_menu" style="xhtml" />
+				</div>
 				<div class="right_footer">
-					<div class="phone"></div>
-					<div class="medialine"></div>
+					<div class="phone">
+							<img src="/images/phone.png" /> <jdoc:include type="modules" name="phone" style="xhtml" />
+					</div>
+					<div class="medialine">
+							<p>Разработка сайта - <a target="_blank" href="http://www.medialine.by">Медиа Лайн</a></p>
+					</div>
 				</div>
 			</footer>
 		</div>

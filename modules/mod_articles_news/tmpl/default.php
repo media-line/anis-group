@@ -17,4 +17,4 @@ defined('_JEXEC') or die;
 	<?php endforeach; ?>
 </div>
 
-<a style="margin: 0 auto;" href="/index.php?option=com_content&view=category&layout=blog&id=8"><button class="btn ansis-btn">Больше статей</button></a>
+<a style="margin: 0 auto;" href="/index.php/ru/stati"><button class="btn ansis-btn">Больше статей</button></a>

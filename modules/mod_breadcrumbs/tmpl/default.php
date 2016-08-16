@@ -18,7 +18,7 @@ JHtml::_('bootstrap.tooltip');
 			<?php echo JText::_('MOD_BREADCRUMBS_HERE'); ?>&#160;
 		</li>
 	<?php else : ?>
-		<li class="active">
+		<li class="active" style="display: none;">
 			<span class="divider icon-location"></span>
 		</li>
 	<?php endif; ?>

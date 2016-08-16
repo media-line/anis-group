@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:300";
+
 body {
     background-image: url("/templates/protostar/images/bg-big.jpg");
 }
@@ -17,6 +19,7 @@ body {
 .blocks {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .ansis-btn {
@@ -30,6 +33,25 @@ body {
 .ansis-btn:hover {
   color: #fff;
   background-color: #1a7bff;
+}
+
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: center;
+}
+
+.breadcrumb > li + li::before {
+    content: "";
+    padding: 0;
+}
+
+.page-header {
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 
@@ -64,10 +86,14 @@ ul.menumain {
 h1.list_of_articles {
     font-size: 40px;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 70px 0 40px 0;
 }
 
-.list_of_articles {
+div.list_of_articles {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .intro-articles-news {
@@ -82,19 +108,142 @@ h1.list_of_articles {
 }
 
 .one-article-new a > p {
-  height: 75px;
-  padding: 0 20px;
-  width: 187px;
-  float: right;
+    height: 75px;
+    padding: 0;
+    width: 180px;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .one-article-new > p {
-  float: right;
-  width: 188px;
-  padding: 0 20px;
+    float: right;
+    width: 180px;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #787878;
 }
 
 .newsflash {
-  padding: 0 50px;
-  text-align: left;
+    padding: 0 50px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    Блог
+\*------------------------------------*/
+.blog > h2 {
+    text-align: center;
+}
+
+.pull-left.item-image, .pull-left.item-image img  {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+}
+
+
+
+
+/*------------------------------------*\
+    Подвал (Footer)
+\*------------------------------------*/
+footer {
+    padding: 65px 50px 95px 50px;
+    background-color: #fbfbfb;
+}
+
+.copyright, .bottom_menu, .right_footer{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bottom_menu {
+    width: 50%;
+    text-align: center;
+}
+
+.bottom_menu h3 {
+    margin: 0;
+    color: #1a7bff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.bottom_menu .nav > li > a {
+    padding: 10px 0;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.bottom_menu .nav > li:hover > a {
+    color: #1a7bff;
+    background-color: transparent;
+}
+
+.copyright, .right_footer {
+    width: 24.6%;
+}
+
+.bottom_menu > .moduletable, .phone > .moduletable {
+  display: inline-block;
+}
+
+.bottom_menu > .moduletable {
+    text-align: left;
+}
+
+.bottom_menu > .moduletable:nth-child(1) {
+    margin-right: 80px;
+}
+
+.phone p {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+
+.phone img {
+    position: relative;
+    bottom: 3px;
+}
+
+.phone {
+    padding-bottom: 100px;
+}
+
+.medialine p {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.map_window {
+    height: 520px;
+}
+
+.copyright h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #787878;
+    margin: 0 0 20px 0;
+}
+
+.copyright p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: #787878;
 }

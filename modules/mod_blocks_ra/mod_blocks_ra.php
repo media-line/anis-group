@@ -33,3 +33,12 @@ $qtySlides = 4;
     <?php } ?>
 </div>
 <div class="clearfix"></div>
+
+<?php
+    $menu = JFactory::getApplication()->getMenu();
+    if ($menu->getActive()!= $menu->getDefault()):
+?>
+
+    <input class="ansis-btn" type="button" onclick="history.back();" value="Вернуться назад"/>
+
+<?php endif; ?>
