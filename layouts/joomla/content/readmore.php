@@ -13,7 +13,7 @@ $params = $displayData['params'];
 $item = $displayData['item'];
 ?>
 
-<p class="readmore" style="text-align: center;">
+<p class="readmore" style="text-align: center; margin-top: 45px;">
 	<a class="btn ansis-btn" href="<?php echo $displayData['link']; ?>" itemprop="url">
 		<!--<span class="icon-chevron-right"></span>-->
 		<?php if (!$params->get('access-view')) :

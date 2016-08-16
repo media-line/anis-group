@@ -109,9 +109,19 @@ JHtml::_('behavior.caption');
 	<?php if (isset ($this->item->toc)) :
 		echo $this->item->toc;
 	endif; ?>
-	<div itemprop="articleBody">
+	<div itemprop="articleBody" class="text-page">
 		<?php echo $this->item->text; ?>
 	</div>
+		
+		<?php
+        $test = JFactory::getApplication()->getMenu();
+        $currentMenuId = $test->getActive()->id;
+        if($currentMenuId == 104) {
+            echo '
+            <input class="ansis-btn" type="button" onclick="history.back();" value="Вернуться назад"/>
+            ';
+        }
+        ?>
 
 	<?php if ($info == 1 || $info == 2) : ?>
 		<?php if ($useDefList) : ?>
