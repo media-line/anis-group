@@ -124,6 +124,9 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
                 </div>
             </div>
         </div>
+        <div class="top_slider">
+            <jdoc:include type="modules" name="top_slider" style="xhtml" />
+        </div>
         <?php
         $app = JFactory::getApplication();
         $menu = $app->getMenu();
@@ -131,14 +134,12 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
         {
             echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" /><jdoc:include type="modules" name="mod_map" style="xhtml" />';
         } ?>
-        <div class="top_slider">
-            <jdoc:include type="modules" name="top_slider" style="xhtml" />
-        </div>
         <div class="clearfix"></div>
 		<div class="container">
 			
 			<div class="blocks">
                 <jdoc:include type="modules" name="blocks" style="xhtml" />
+                <jdoc:include type="modules" name="left-menu" style="xhtml" />
 			</div>
 			<div class="for-company">
 				<div class="text-for-company">
