@@ -110,31 +110,42 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 
 </head>
 	<body>
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" />
+            </div>
+            <div class="main_menu  col-md-7">
+                <jdoc:include type="modules" name="main_menu" style="xhtml" />
+            </div>
+            <div class="lang  col-md-3">
+                <jdoc:include type="modules" name="top-phone" style="xhtml" />
+                <jdoc:include type="modules" name="lang" style="xhtml" />
+            </div>
+        </div>
+        <?php
+        $app = JFactory::getApplication();
+        $menu = $app->getMenu();
+        if ($menu->getActive() != $menu->getDefault())
+        {
+            echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" /><jdoc:include type="modules" name="mod_map" style="xhtml" />';
+        } ?>
+        <div class="top_slider">
+            <jdoc:include type="modules" name="top_slider" style="xhtml" />
+        </div>
+        <div class="clearfix"></div>
 		<div class="container">
-			<div class="header">
-				<div class="logo  col-md-2"></div>
-				<div class="main_menu  col-md-8">
-					<jdoc:include type="modules" name="main_menu" style="xhtml" />
-				</div>
-				<div class="lang  col-md-2">
-					<jdoc:include type="modules" name="lang" style="xhtml" />
-				</div>
-			</div>
-            <?php
-            $app = JFactory::getApplication();
-            $menu = $app->getMenu();
-            if ($menu->getActive() != $menu->getDefault())
-            {
-                echo '   <jdoc:include type="modules" name="position-2" style="xhtml" /> <jdoc:include type="component" /><jdoc:include type="modules" name="mod_map" style="xhtml" />';
-            } ?>
-			<div class="top_slider">
-                <jdoc:include type="modules" name="top_slider" style="xhtml" />
-			</div>
-            <div class="clearfix"></div>
+			
 			<div class="blocks">
                 <jdoc:include type="modules" name="blocks" style="xhtml" />
 			</div>
-			<div class="bottom_slider"></div>
+			<div class="for-company">
+				<div class="text-for-company">
+                    <jdoc:include type="modules" name="text-for-company" style="xhtml" />
+                </div>
+                <div class="slider-for-company">
+                    <jdoc:include type="modules" name="slider-for-company" style="xhtml" />
+                </div>
+			</div>
 			<div class="list_of_articles">
                 <jdoc:include type="modules" name="list_of_articles" style="xhtml" />
             </div>

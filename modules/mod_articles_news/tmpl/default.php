@@ -9,8 +9,8 @@
 
 defined('_JEXEC') or die;
 ?>
-<div class="newsflash<?php echo $moduleclass_sfx; ?>">
-	<?php foreach ($list as $item) : ?>
+    <div class="newsflash<?php echo $moduleclass_sfx; ?>">
+        <?php foreach ($list as $item) : ?>
 			<div class="one-article-new">
 				<?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
 			</div>
