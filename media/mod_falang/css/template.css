@@ -9,7 +9,6 @@ div.mod-languages ul {
     text-align: center;
 }
 div.mod-languages li {
-	padding: 13px 6px 13px 9px;
     background-color: transparent;
     margin-right: 10px;
 }
@@ -18,9 +17,9 @@ div.mod-languages li:last-child {
     margin-right: 0;
 }
 
-    div.mod-languages li:hover, .lang-active {
-        background-color: #eb246c !important;
-    }
+div.mod-languages li:hover > a, .lang-active > a {
+    background-color: #37393f !important;
+}
 
 div.mod-languages ul.lang-inline li {
 	display:inline;
@@ -37,7 +36,14 @@ div.mod-languages img {
 div.mod-languages a {
 	text-decoration: none;
 	color: #000;
-    font-size: 18px;
+	font-size: 18px;
+	padding: 9px;
+	border: 1px solid black;
+	display: inline-block;
+	width: 46px;
+	height: 37px;
+	position: relative;
+	bottom: 10px;
 }
 
     div.mod-languages li:hover a, .lang-active a {
@@ -75,8 +81,8 @@ div.advanced-dropdown a.langChoose img {
 
 div.advanced-dropdown span.caret{
 	display: inline-block;
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	vertical-align: middle;
 	border-top: 4px solid #fff;
 	border-right: 4px solid transparent;

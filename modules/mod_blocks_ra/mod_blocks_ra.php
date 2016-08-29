@@ -24,9 +24,9 @@ $qtySlides = 4;
         <a id="ablock" class="item col-xs-12  col-sm-6  col-md-3" href="<?php echo $params->get('url'.$i); ?>">
             <div class="block-img">
                 <div class="block-hover" style="background-image: url('<?php echo $params->get('img'.$i); ?>');">
-                    <div class="titleblock">
-                        <p><?php echo $params->get('txt'.$i); ?></p>
-                    </div>
+                </div>
+                <div class="titleblock">
+                    <p><?php echo $params->get('txt'.$i); ?></p>
                 </div>
             </div>
         </a>

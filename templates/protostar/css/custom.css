@@ -1,5 +1,19 @@
 @import "https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:300";
 
+body {
+
+background: rgba(209,209,209,1);
+background: -moz-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(89,86,89,1) 0%, rgba(219,219,219,1) 34%, rgba(254,254,254,1) 76%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(209,209,209,1)), color-stop(0%, rgba(89,86,89,1)), color-stop(34%, rgba(219,219,219,1)), color-stop(76%, rgba(254,254,254,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(89,86,89,1) 0%, rgba(219,219,219,1) 34%, rgba(254,254,254,1) 76%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(89,86,89,1) 0%, rgba(219,219,219,1) 34%, rgba(254,254,254,1) 76%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(top, rgba(209,209,209,1) 0%, rgba(89,86,89,1) 0%, rgba(219,219,219,1) 34%, rgba(254,254,254,1) 76%, rgba(254,254,254,1) 100%);
+background: linear-gradient(to bottom, rgba(209,209,209,1) 0%, rgba(89,86,89,1) 0%, rgba(219,219,219,1) 34%, rgba(254,254,254,1) 76%, rgba(254,254,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#fefefe', GradientType=0 );
+
+
+}
+
 .logo {
     width: 16.6%;
     float: left;
@@ -15,7 +29,6 @@
 }*/
 
 .container {
-    background-color: #fff;
     max-width: 1280px;
     min-height: 100vh;
     padding: 0;
@@ -31,11 +44,12 @@
     width: 90%;
     margin: 0 auto;
     text-align: center;
+	margin-top: 20px;
 }
 
 .ansis-btn {
   color: #1a7bff;
-  border: 1px solid #1a7bff;
+  border: 1px solid #e7e7e7;
   border-radius: 40px;
   padding: 20px 35px;
   background-color: #fff;
@@ -44,6 +58,7 @@
 .ansis-btn:hover {
     color: #fff;
     background-color: #1a7bff;
+    border: 1px solid #1a7bff;
 }
 
 .breadcrumb {
@@ -141,13 +156,34 @@ ul.menumain {
     font-size: 15px;
     padding: 16px 16px;
     margin: 26px auto;
+	margin-right: 10px;
 }
 
-.main_menu .nav > li > a:hover {
+.main_menu .nav > li > a:hover, .main_menu .nav > li.active > a  {
     color: #fff;
     background-color: #37393f;
+	margin-right: 10px;
+}
+/*------------------------------------*\
+    Шапка (Header)
+\*------------------------------------*/
+.lang .moduletable {
+    margin-bottom: -30px;
 }
 
+.lang .phone {
+    padding-bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.email {
+    margin-left: 24px;
+}
+
+.header {
+    background-color: #fff;
+}
 
 
 
@@ -157,7 +193,7 @@ ul.menumain {
 \*------------------------------------*/
 h1.list_of_articles {
     font-size: 40px;
-    text-align: center;
+    text-align: left;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     margin: 70px 0 40px 0;
@@ -206,6 +242,11 @@ div.list_of_articles {
     padding: 0 20px;
     text-align: left;
     margin-bottom: 50px;
+}
+
+.text-page li {
+    text-align: left;
+    color: #6b6b6b;
 }
 
 
@@ -270,14 +311,15 @@ div.list_of_articles {
     Подвал (Footer)
 \*------------------------------------*/
 footer {
-    padding: 65px 50px 95px 50px;
-    background-color: #fbfbfb;
+    padding: 65px 50px 65px 50px;
+    background-color: #37393f;
+    color: #fff;
 }
 
 .copyright, .bottom_menu, .right_footer{
     width: 33%;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
 .bottom_menu {
@@ -287,20 +329,20 @@ footer {
 
 .bottom_menu h3 {
     margin: 0;
-    color: #1a7bff;
+    color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
 }
 
 .bottom_menu .nav > li > a {
     padding: 10px 0;
-    color: #000;
+    color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
 }
 
 .bottom_menu .nav > li:hover > a {
-    color: #1a7bff;
+    color: #fff;
     background-color: transparent;
 }
 
@@ -341,6 +383,10 @@ footer {
     text-align: right;
 }
 
+.medialine p a {
+	color: #fff;
+}
+
 .map_window {
     height: 520px;
 }
@@ -349,7 +395,7 @@ footer {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 13px;
-    color: #787878;
+    color: #fff;
     margin: 0 0 20px 0;
 }
 
@@ -357,7 +403,7 @@ footer {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 10px;
-    color: #787878;
+    color: #fff;
 }
 
 .for-company {
@@ -386,13 +432,23 @@ footer {
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    color: #000;
+}
+
+.text-for-company li {
+    color: #000;
 }
 
 .text-for-company .btn {
     margin-top: 20px;
 }
 
-/*слайдер о компании*/
+.mod-languages {
+    width: 50%;
+    float: right;
+}
+
+    /*слайдер о компании*/
 .slider-for-company .bx-default-pager {
     display: none;
 }
@@ -410,4 +466,34 @@ footer {
 .slider-for-company .bx-wrapper .bx-next {
     background: url("/images/company_slider/arrows/next.jpg");
     right: 0;
+}
+
+footer > .container {
+    background-color: transparent;
+    min-height: auto;
+}
+
+.block-img {
+    background-color: #ffffff;
+}
+
+.block-img:hover {
+    background-color: #37393f;
+}
+
+.block-img:hover .titleblock {
+    color: #fff;
+}
+
+
+.parent:hover .dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-menu > li:hover > a {
+    color: #fff;
+}
+
+.dropdown-menu {
+    margin: -27px 0 0;
 }

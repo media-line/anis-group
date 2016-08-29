@@ -111,15 +111,17 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 </head>
 	<body>
         <div class="header">
-            <div class="logo">
-                <img src="images/logo.png" />
-            </div>
-            <div class="main_menu  col-md-7">
-                <jdoc:include type="modules" name="main_menu" style="xhtml" />
-            </div>
-            <div class="lang  col-md-3">
-                <jdoc:include type="modules" name="top-phone" style="xhtml" />
-                <jdoc:include type="modules" name="lang" style="xhtml" />
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.png" />
+                </div>
+                <div class="main_menu  col-md-7">
+                    <jdoc:include type="modules" name="main_menu" style="xhtml" />
+                </div>
+                <div class="lang  col-md-3">
+                    <jdoc:include type="modules" name="top-phone" style="xhtml" />
+                    <jdoc:include type="modules" name="lang" style="xhtml" />
+                </div>
             </div>
         </div>
         <?php
@@ -149,23 +151,25 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 			<div class="list_of_articles">
                 <jdoc:include type="modules" name="list_of_articles" style="xhtml" />
             </div>
-			<footer>
-				<div class="copyright">
-						<jdoc:include type="modules" name="copyright" style="xhtml" />
-				</div>
-				<div class="bottom_menu">
-						<jdoc:include type="modules" name="bottom_menu" style="xhtml" />
-						<jdoc:include type="modules" name="services_menu" style="xhtml" />
-				</div>
-				<div class="right_footer">
-					<div class="phone">
-							<img src="/images/phone.png" /> <jdoc:include type="modules" name="phone" style="xhtml" />
-					</div>
-					<div class="medialine">
-							<p>Разработка сайта - <a target="_blank" href="http://www.medialine.by">Медиа Лайн</a></p>
-					</div>
-				</div>
-			</footer>
 		</div>
+		<footer>
+            <div class="container">
+                <div class="copyright">
+                    <jdoc:include type="modules" name="copyright" style="xhtml" />
+                </div>
+                <div class="bottom_menu">
+                    <jdoc:include type="modules" name="bottom_menu" style="xhtml" />
+                    <jdoc:include type="modules" name="services_menu" style="xhtml" />
+                </div>
+                <div class="right_footer">
+                    <div class="phone">
+                        <img src="/images/phone.png" /> <jdoc:include type="modules" name="phone" style="xhtml" />
+                    </div>
+                    <div class="medialine">
+                        <p>Разработка сайта - <a target="_blank" href="http://www.medialine.by">Медиа Лайн</a></p>
+                    </div>
+                </div>
+            </div>
+		</footer>
 	</body>
 </html>
