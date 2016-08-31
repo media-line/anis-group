@@ -29,6 +29,8 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
 
+$pathname = $_SERVER['REQUEST_URI'];
+
 if($task == "edit" || $layout == "form" )
 {
 	$fullWidth = 1;
@@ -175,7 +177,13 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
                         <img src="/images/phone.png" /> <jdoc:include type="modules" name="phone" style="xhtml" />
                     </div>
                     <div class="medialine">
-                        <p>Разработка сайта - <a target="_blank" href="http://www.medialine.by">Медиа Лайн</a></p>
+                        <?php
+                        if(strpos($pathname, '/en/') !== false) {
+                            echo '<p>Site development - <a target="_blank" href="http://www.medialine.by">MediaLine</a></p>';
+                        } else {
+                            echo '<p>Разработка сайта - <a target="_blank" href="http://www.medialine.by">Медиа Лайн</a></p>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

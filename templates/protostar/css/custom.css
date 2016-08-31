@@ -113,6 +113,12 @@ body {
     margin: 0;
     text-align: center;
     border-bottom: none;
+/*    width: 50%;*/
+    display: inline-block;
+}
+
+.page-header > h2 {
+    margin-top: 10px;
 }
 
 .item-page > .page-header > h2:nth-child(1), .blog > h2 >span {
@@ -135,13 +141,12 @@ body {
 
 .leading {
     position: relative;
-    bottom: 40px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 15px;
 }
 
 .leading > .page-header {
     position: relative;
-    top: 325px;
-    border-bottom: none;
 }
 
 .item-page {
@@ -195,10 +200,16 @@ ul.menumain {
 	margin-right: 10px;
 }
 
-.main_menu .nav > li > a:hover, .main_menu .nav > li.active > a  {
+.main_menu .nav > li > a:hover {
     color: #fff;
     background-color: #37393f;
 	margin-right: 10px;
+}
+
+.main_menu .nav > li.active > a {
+    color: #fff;
+    background-color: #0404CC;
+    margin-right: 10px;
 }
 /*------------------------------------*\
     Шапка (Header)
@@ -321,11 +332,14 @@ div.list_of_articles {
     width: 100%;
 }
 
-.pull-left.item-image, .pull-left.item-image img  {
-    width: 100%;
+.pull-left.item-image {
+    width: 16%;
     height: auto;
     max-height: 280px;
-    margin: 0 20px 45px 0;
+}
+
+.pull-left.item-image img {
+    width: 100%;
 }
 
 .leading p {

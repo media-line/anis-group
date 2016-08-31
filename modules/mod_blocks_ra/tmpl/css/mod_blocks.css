@@ -76,6 +76,7 @@
     float: left;
     background-position: center;
     margin-top: 12px;
+    background-repeat: no-repeat;
 }
 
 .item img {

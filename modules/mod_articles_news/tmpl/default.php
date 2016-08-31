@@ -8,9 +8,17 @@
  */
 
 defined('_JEXEC') or die;
+
+$pathname = $_SERVER['REQUEST_URI'];
 ?>
 <div class="article-wrapper">
-    <a style="margin: 0 auto;" href="/index.php/stati"><button class="btn article-btn">▶ Больше статей</button></a>
+    <?php
+    if(strpos($pathname, '/en/') !== false) {
+        echo '<a style="margin: 0 auto;" href="/index.php/stati"><button class="btn article-btn">▶ More articles</button></a>';
+    } else {
+        echo '<a style="margin: 0 auto;" href="/index.php/stati"><button class="btn article-btn">▶ Больше статей</button></a>';
+    }
+    ?>
 
     <div class="newsflash<?php echo $moduleclass_sfx; ?>">
         <?php foreach ($list as $item) : ?>

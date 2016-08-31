@@ -37,4 +37,8 @@ $slide4 = $params->get('img3');
         echo '
             <img src="'. $slide4 .'" style="width: 100%;" />
         ';
+    } elseif(strpos($pathname, '/index.php/uslugi') !== false) {
+        echo '
+            <img src="'. $slide1 .'" style="width: 100%;" />
+        ';
     }
