@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>mod_blocks_ra</name>
+	<author>Andrei Kravchenko</author>
+	<creationDate>2016</creationDate>
+	<authorEmail>krauchanka.a@gmail.com</authorEmail>
+	<version>1.0</version>
+	<description>Модуль картинок под хеадером</description>
+
+	<files>
+		<filename module="mod_head_pic">mod_head_pic.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_head_pic.xml</filename>
+        <folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="img0" type="media" label="Инженерное проектирование" />
+                <field type="spacer" />
+				<field name="img1" type="media" label="Технические переводы" />
+                <field type="spacer" />
+				<field name="img2" type="media" label="3D проектирование" />
+                <field type="spacer" />
+				<field name="img3" type="media" label="Инженерные расчеты" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

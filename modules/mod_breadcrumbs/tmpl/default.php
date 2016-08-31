@@ -10,9 +10,22 @@
 defined('_JEXEC') or die;
 
 JHtml::_('bootstrap.tooltip');
+
+$pathname = $_SERVER['REQUEST_URI'];
 ?>
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb<?php echo $moduleclass_sfx; ?>">
+<?php
+    if(strpos($pathname, 'uslugi') !== false) {
+        echo '
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb uslugi">
+        ';
+    } else {
+        echo '
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+        ';
+    }
+?>
+
 	<?php if ($params->get('showHere', 1)) : ?>
 		<li>
 			<?php echo JText::_('MOD_BREADCRUMBS_HERE'); ?>&#160;

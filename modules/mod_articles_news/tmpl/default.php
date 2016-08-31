@@ -9,12 +9,14 @@
 
 defined('_JEXEC') or die;
 ?>
+<div class="article-wrapper">
+    <a style="margin: 0 auto;" href="/index.php/stati"><button class="btn article-btn">▶ Больше статей</button></a>
+
     <div class="newsflash<?php echo $moduleclass_sfx; ?>">
         <?php foreach ($list as $item) : ?>
-			<div class="one-article-new">
-				<?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
-			</div>
-	<?php endforeach; ?>
+            <div class="one-article-new">
+                <?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
 </div>
-
-<a style="margin: 0 auto;" href="/index.php/stati"><button class="btn ansis-btn">Больше статей</button></a>

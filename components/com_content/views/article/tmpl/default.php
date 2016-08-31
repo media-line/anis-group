@@ -19,11 +19,26 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
+
+$pathname = $_SERVER['REQUEST_URI'];
 ?>
-<div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
+
+<?php
+if(strpos($pathname, 'stati')||strpos($pathname, 'kontakty') !== false) {
+    echo '
+            <div class="item-page stati" itemscope itemtype="https://schema.org/Article">
+        ';
+} else {
+    echo '
+            <div class="item-page" itemscope itemtype="https://schema.org/Article">
+        ';
+}
+?>
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	<?php if ($this->params->get('show_page_heading')) : ?>
-	<div class="page-header">
+
+
+        <div class="page-header">
 		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
 	<?php endif;
@@ -44,7 +59,19 @@ JHtml::_('behavior.caption');
 		<div class="clearfix"> </div>
 	<?php endif; ?>
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
-	<div class="page-header">
+
+        <?php
+        if(strpos($pathname, 'kontakty') !== false) {
+            echo '
+            <div class="page-header kontacts">
+        ';
+        } else {
+            echo '
+            <div class="page-header">
+        ';
+        }
+        ?>
+
 		<?php if ($params->get('show_title')) : ?>
 			<h2 itemprop="name">
 				<?php echo $this->escape($this->item->title); ?>
