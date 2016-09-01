@@ -115,7 +115,9 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
         <div class="header">
             <div class="container">
                 <div class="logo">
-                    <img src="images/logo.png" />
+                    <a href="/">
+                        <img src="images/logo.png" />
+                    </a>
                 </div>
                 <div class="main_menu  col-md-7">
                     <jdoc:include type="modules" name="main_menu" style="xhtml" />

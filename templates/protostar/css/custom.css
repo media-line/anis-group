@@ -285,10 +285,10 @@ div.list_of_articles {
     width: 256px;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    font-size: 13px;
     font-weight: 300;
     color: #787878;
     margin-right: 7px;
+    font-size: 15px;
 }
 
 .newsflash {
@@ -299,6 +299,7 @@ div.list_of_articles {
 .text-page li {
     text-align: left;
     color: #6b6b6b;
+    font-size: 16px;
 }
 
 .article-btn {
@@ -344,6 +345,7 @@ div.list_of_articles {
 
 .leading p {
     text-align: center;
+    font-size: 16px;
 }
 
 .pagination ul > li:last-child, .pagination ul > li:nth-last-child(2), .pagination ul > li:nth-child(1), .pagination ul > li:nth-child(2) {
@@ -376,7 +378,7 @@ div.list_of_articles {
     text-align: left;
     font-family: 'Lato', sans-serif;
     color: #6b6b6b;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -508,7 +510,7 @@ footer {
 }
 
 .text-for-company p {
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #000;
@@ -516,6 +518,7 @@ footer {
 
 .text-for-company li {
     color: #000;
+    font-size: 16px;
 }
 
 .text-for-company .btn {
