@@ -38,11 +38,10 @@ body {
 .header {
     margin: 0;
     height: 102px;
-    border-bottom: 1px solid #e1e1e1;
 }
 
 .blocks {
-    width: 90%;
+    /*width: 90%;*/
     margin: 0 auto;
     text-align: center;
 	margin-top: 20px;
@@ -230,7 +229,7 @@ ul.menumain {
 }
 
 .header {
-    background-color: #fff;
+    background-color: #d4d4d4;
 }
 
 
@@ -262,6 +261,7 @@ div.list_of_articles {
     width: 23%;
     display: inline-block;
     margin-right: 27px;
+    vertical-align: top;
 }
 
 .one-article-new:last-child {
@@ -269,7 +269,7 @@ div.list_of_articles {
 }
 
 .one-article-new a > p {
-    height: 60px;
+    height: auto;
     padding: 0;
     width: 256px;
     float: left;
@@ -484,7 +484,7 @@ footer {
 }
 
 .for-company {
-    width: 90%;
+    /*width: 90%;*/
     margin: 0 auto;
 }
 
@@ -622,4 +622,9 @@ footer > .container {
 
 .kontacts h2 {
     text-align: center !important;
+}
+
+.top_slider {
+    max-width: 1600px;
+    margin: 0 auto;
 }

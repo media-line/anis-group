@@ -44,6 +44,7 @@ div.mod-languages a {
 	height: 37px;
 	position: relative;
 	bottom: 10px;
+	background-color: #fff;
 }
 
     div.mod-languages li:hover a, .lang-active a {

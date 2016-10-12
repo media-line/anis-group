@@ -16,21 +16,15 @@ $item_heading = $params->get('item_heading', 'h4');
 	<<?php echo $item_heading; ?> class="newsflash-title<?php echo $params->get('moduleclass_sfx'); ?>">
 	<?php if ($params->get('link_titles') && $item->link != '') : ?>
 		<a href="<?php echo $item->link; ?>">
-            <?php $images = json_decode($item->images); ?>
+            <?php $images = json_decode($item->images);
 
-            <?php 	$menu=JFactory::getApplication()->getMenu();
-                if($menu->getActive()!=$menu->getDefault()) {
                 echo '
-                    <p>' .$item->title. '</p>
-                ';
-            }
-            else {
-                echo '
-                        <img class="intro-articles-news тест" src="' .htmlspecialchars($images->image_intro). '" alt="' .htmlspecialchars($images->image_intro_alt). '"/>
+                        <img class="intro-articles-news тест" 
+                        src="' .htmlspecialchars($images->image_intro). '" 
+                        alt="' .htmlspecialchars($images->image_intro_alt). '"/>
                         <p class="main_title">' .$item->title. '</p>
                 ';
-            }
-            ?>
+             ?>
 		</a>
 	<?php else : ?>
 		<?php echo $item->title; ?>
